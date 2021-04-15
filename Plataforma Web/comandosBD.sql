@@ -11,6 +11,13 @@ create table clientes(
     telefoneCliente varchar(14)
 );
 
+Descrever tablea -> DESCRIBE nome_da_tabela;
+Inserir dados -> INSERT nome_da_tabela(colunas_da_tabela) VALUES (
+  ESCREVA AQUI OS DADOS
+);
+Limpar tela \! cls
+Deletar uma tabela -> DROP TABLE nome_da_tabela;
+
 //Listagem de dados
 // * é para selecionar todos os dados
 
