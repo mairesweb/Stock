@@ -1,11 +1,24 @@
-const express = require('express'); //Carregar o módulo do express
-const Stock = express(); // Importa o módulo do framework express para a aplicação Stock
+//Carregar os frameworks: Express, Handlebars, Sequelize
+const express = require('express');
+const Stock = express();
+const handlebars = require('express-handlebars');
+const Sequelize = require('sequelize');
 
 
-Stock.get('/', function(req, res){ //Parametro para chamar a página do sistema
-    res.sendFile(__dirname + '/index.html');
-});
+// Config
+    // Tamplate Engine
+    Stock.engine('handlebars', handlebars({defaultLayout: 'main'}));
+    Stock.set('view engine', 'handlebars');
+    // Conectar ao Banco de Dados
+    const sequelize = new Sequelize('sistemastock', 'root', 'qaz@123', {
+        host: "localhost",
+        dialect: 'mysql'
+    });
 
+
+
+    
+// Abertura do servidor. Essa deve ser a ultima linha do index.js
 Stock.listen(8081, function(){
     console.log('Servidor executando na url: http://localhost:8081');
-}); // Abertura do servidor. Essa deve ser a ultima linha do index.js
+}); 
