@@ -1,11 +1,20 @@
-const express = require('express') // Inicialização dos recursos da API Express
-const morgan = require('morgan') // Inicialização dos recursos da API Morgan
+const express = require('express')
+const Stock = express()
+const handlebars = require('express-handlebars')
 
 
-const stock = express()
-stock.use(morgan('dev'))
-stock.use(express.json)
+// Config
+    // Tamplate Engine
+    Stock.engine('handlebars', handlebars({defaultLayout: 'main'}))
+    Stock.set('view engine', 'handlebars')
+    
+//
 
-stock.listen(21262, () => {
-    console.log(`Express started at http://localhost:21262`)
-})
+
+
+
+// Abertura do servidor. Essa deve ser a ultima linha do index.js
+    Stock.listen(8081, function(){
+        console.log('Servidor executando na url: http://localhost:8081')
+    })
+//
