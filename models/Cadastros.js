@@ -1,7 +1,7 @@
 // Chamada do módulo db.js pra que possa conectar ao banco de dados.
 const db = require('./db')
 
-// Contrução de tabelas
+// Contrução de modelo de tabelas
     // Clientes
     const cadastro_clientes = db.sequelize.define('cadastro_clientes', {
         nome: {
@@ -107,7 +107,7 @@ const db = require('./db')
             type: db.Sequelize.FLOAT
         },
         referencia_produto: {
-            type: db.Sequelize.FLOAT
+            type: db.Sequelize.STRING
         },
     })
 //
@@ -115,14 +115,23 @@ const db = require('./db')
 
 /* Trecho que cria as tabelas. Apagar ou comentar linhas após a criação!!!
     cadastro_clientes.sync({force: true})
-    cadastro_funcionarios.sync({force: true})
     cadastro_produtos.sync({force: true})
-*/
-
+    cadastro_funcionarios.sync({force: true})
+    */
+   
 // Exportar tabelas para acesso em outros modulos.
     module.exports = cadastro_clientes
     module.exports = cadastro_funcionarios
     module.exports = cadastro_produtos
 //
+
+/* Registro inicial na tabela cadastro_funcionarios com o usuário administrador. Apagar ou comentar linhas após a criação!!!
+    cadastro_funcionarios.create({
+        nome: 'Administrador',
+        usuario: 'admin',
+        senha: '123',
+        fazLogin: true
+    })
+*/
 
 
