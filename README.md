@@ -38,7 +38,7 @@ Inicialmente o projeto terá as seguintes telas:
     - *Comissão de mecânicos*
 
 ## Sistema sendo projetado com o padrão REST e RESTFULL
-O rest é um padrão que definirá as características fundamentais para a contrução de um projeto Web para que as APIs utilizadas consigam interligar diferentes frameworks, tanto no back-end como no front-end.
+O rest é um padrão que definirá as características fundamentais para a contrução de um projeto Web para que as APIs utilizadas consigam interligar diferentes frameworks, tanto no back-end como no front-end. Decidimos utilizar o rest pelo fato de se mais rápido para implementar e conceituralmente mais simples de ser usado, não tendo que depender de estruturas xmls em contra partida ao SOAP.
 
 ***Por hora não há um conteúdo extenso para detalhar o uso das APIs presentes.***
 
