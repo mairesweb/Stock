@@ -83,13 +83,13 @@ const db = require('./db')
             type: db.Sequelize.STRING
         },
         usuario: {
-            type: db.Sequelize.STRING
+            type: db.Sequelize.STRING // Campo de usuário usado pelo funcionário para entrar no sistema.
         },
         senha: {
-            type: db.Sequelize.STRING
+            type: db.Sequelize.STRING // Senha de login do usuário.
         },
         fazLogin: {
-            type: db.Sequelize.BOOLEAN
+            type: db.Sequelize.BOOLEAN // Verifica a condição no banco se esse usuário pode fazer login no sistema ou não. A ideia é por uma caixa de seleção no cadastro de funcionários pra ativar ou desativar a opção.
         },
     })
     // Produtos
