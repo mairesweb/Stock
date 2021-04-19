@@ -3,6 +3,7 @@ const app = express()
 const handlebars = require('express-handlebars')
 const bodyParse = require('body-parser')
 const cadastroProdutos = require('./models/Cadastros')
+const cadastroFuncionarios = require('./models/Cadastros')
 
 // Config
     // Tamplate Engine. Avisando o nodejs que usaremos o handlebars como tamplate engine.
@@ -37,8 +38,31 @@ const cadastroProdutos = require('./models/Cadastros')
 
         // Cadastro de Funcionários
             app.get('/cadastros/funcionarios', function(req, res){
-                res.send('Cadastro de Funcionários')
+                res.render('cadastroFuncionarios')
             })
+            // Preenchimento do formulário
+                app.post('/cadastro/funcionarios_status', function(req, res){
+                    cadastroFuncionarios.create({
+                        nome: req.body.nome,
+                        email: req.body.email,
+                        telefone: req.body.telefone,
+                        cpf: req.body.cpf,
+                        endereco: req.body.endereco,
+                        cep: req.body.cep,
+                        numResidencia: req.body.numResidencia,
+                        bairro: req.body.bairro,
+                        cidade: req.body.cidade,
+                        uf: req.body.uf,
+                        complemento: req.body.complemento,
+                        referencia: req.body.referencia,
+                        usuario: req.body.usuario,
+                        senha: req.body.senha
+                    }).then(function(){
+                        res.send('Cadastro realizado com sucesso!')
+                    }).catch(function(erro){
+                        res.send('Erro ao realizar o cadastro. Relatório do erro: '+ erro)
+                    })
+                })
         //
 
         // Cadastro de Produtos
@@ -46,7 +70,7 @@ const cadastroProdutos = require('./models/Cadastros')
                 res.render('cadastroProdutos')
             })
             // Preenchimento do formulário
-                app.post('/cadastro/status', function(req, res){
+                app.post('/cadastro/produtos_status', function(req, res){
                     cadastroProdutos.create({
                         nome_produto: req.body.nome_produto,
                         qntd_produto: req.body.qntd_produto,
@@ -58,8 +82,7 @@ const cadastroProdutos = require('./models/Cadastros')
                     }).catch(function(erro){
                         res.send('Erro ao realizar o cadastro. Relatório do erro: '+ erro)
                     })
-                })
-                
+                })   
         //
     //
 //
