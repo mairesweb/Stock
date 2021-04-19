@@ -37,5 +37,5 @@ Inicialmente o projeto terá as seguintes telas:
     - *Balanço do estoque*
     - *Comissão de mecânicos*
 
-## README.md ainda não finalizado. 
-Um novo commit ainda será feito com mais detalhes.
+## Sistema sendo projetado com o padrão REST e RESTFULL
+O rest é um padrão que definirá as características fundamentais para a contrução de um projeto Web para que as APIs utilizadas consigam interligar diferentes frameworks, tanto no back-end como no front-end.
