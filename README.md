@@ -5,7 +5,7 @@
  
 ## Recursos e frameworks sendo utilizados
  
- A ideia do sistema após a conclusão é que o mesmo atenda uma grande demanda de usuários ao qual ele será hospedado em nuvem para o seu funcionamento. Inicialmente iremos implementar o sistema na plataforma do [Heroki](https://www.heroku.com/) para hospedagem, porém, com o decorrer da demanda e experiencia que tivermos, podemos hospedar em serviços como o [Google Cloud](https://cloud.google.com/?hl=pt-br) ou [AWS](https://aws.amazon.com/pt/).
+ A ideia do sistema após a conclusão é que o mesmo atenda uma grande demanda de usuários ao qual ele será hospedado em nuvem para o seu funcionamento. Inicialmente iremos implementar o sistema na plataforma do [Heroku](https://www.heroku.com/) para hospedagem, porém, com o decorrer da demanda e experiencia que tivermos, podemos hospedar em serviços como o [Google Cloud](https://cloud.google.com/?hl=pt-br) ou [AWS](https://aws.amazon.com/pt/).
 
  Algumas rotas do sistema já se encontram funcional, outras ainda estão em desenvolvimento. Atualmente estamos focando no back-end do sistema com o node.js.
 
